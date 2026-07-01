@@ -32,6 +32,7 @@ RUN;
 /* Identify missing values and error values */
 
 PROC MEANS DATA = work.raw_data
+    
     N
     NMISS
     MEAN
@@ -51,6 +52,7 @@ RUN;
 
 PROC FREQ DATA = work.raw_data;
     TABLES default;
+
 RUN;
 
 
@@ -151,6 +153,7 @@ RUN;
 /* STEPWISE selection chooses the most important variables to predict default */
 
 PROC LOGISTIC DATA = work.train_data
+    
     OUTMODEL = work.logistic_model
     PLOTS(ONLY) = roc;
 
@@ -218,6 +221,7 @@ PROC HPFOREST;
     RESTORE FILE = "/home/u64174377/credit_risk/forest_model.bin";
     SCORE DATA   = work.test_data
     OUT          = work.forest_test_pred;
+
 RUN;
 
 
@@ -309,6 +313,7 @@ RUN;
 /* Base score of 600 at odds of 50:1 */
 
 DATA work.scorecard;
+    
     SET work.logistic_test_pred;
 
     LENGTH risk_band $ 15;
@@ -361,6 +366,7 @@ RUN;
 /* Save final scorecard to CSV for presentation in Excel */
 
 PROC EXPORT
+    
     DATA    = work.scorecard
     OUTFILE = "/home/u64174377/credit_risk/scorecard_results.csv"
     DBMS    = csv
