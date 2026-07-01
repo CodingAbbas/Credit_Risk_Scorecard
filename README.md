@@ -17,7 +17,7 @@ This project was built to demonstrate the full modelling pipeline from raw data 
 &nbsp;
 
 ## Dataset
-The dataset contains 150,000 borrower records across ten input features including revolving utilisation, age, debt ratio, monthly income, number of open credit, and late payment history across 30, 60 and 90 days. The scale and range of variables make it well suited for building a credit scorecard, with enough complexity to reflect the type of data encountered in a real lending environment. 
+Data was sourced from the Kaggle (Give me some credit) containing 150,000 borrower records across ten input features including revolving utilisation, age, debt ratio, monthly income, number of open credit, and late payment history across 30, 60 and 90 days. The scale and range of variables make it well suited for building a credit scorecard, with enough complexity to reflect the type of data encountered in a real lending environment. 
 
 The dataset presented several data quality challenges, with missing values across monthly income, revolving utilisation, debt ratio and dependents, each requiring imputation. Incorrect values were also present, including age recorded as 0 and revolving utilisation exceeding 1, both of which would have distorted the results. These inconsistencies reflected the kind of messy, real-world data an analyst would typically encounter before building any predictive model.
 
