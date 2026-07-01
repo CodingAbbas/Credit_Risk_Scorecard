@@ -1,9 +1,3 @@
-/* Project: Predicting Credit Default Risk Using Statistical Modelling */
-/* Script: Credit_Risk_Scorecard.SAS */
-/* Tools: SAS Studio */
-/* Data: Kaggle (Give Me Some Credit) */
-
-
 /* STEP 1: LOAD THE DATA */
 /* Upload the CSV file */
 /* Assign short variable names to avoid character limit */
