@@ -85,11 +85,11 @@ The final scorecard was exported to CSV for further analysis.
 
 | Risk Band | Score | Share | Description | Action |
 |-----------|-------|-------|-------------|--------|
-| Very Low Risk | 750 and above | 0% | Borrower has a strong repayment history with very low probability of default | Approve lending, offer competitive rates |
-| Low Risk | 650 to 749 | 0% | Borrower is likely to repay with minor risk indicators present | Approve lending, standard rates apply |
-| Medium Risk | 550 to 649 | 0% | Borrower shows some signs of financial stress or irregular payment behaviour | Consider lending with conditions or higher rate |
-| High Risk | 450 to 549 | 0% | Borrower has notable delinquency history or high debt burden | Decline or require additional security |
-| Very High Risk | Below 450 | 0% | Borrower has a significant probability of default within 24 months | Decline lending |
+| Very Low Risk | 750 and above | 0.03% | Borrower has a strong repayment history with very low probability of default | Approve lending, offer competitive rates |
+| Low Risk | 650 to 749 | 0.10% | Borrower is likely to repay with minor risk indicators present | Approve lending, standard rates apply |
+| Medium Risk | 550 to 649 | 81.33% | Borrower shows some signs of financial stress or irregular payment behaviour | Consider lending with conditions or higher rate |
+| High Risk | 450 to 549 | 18.50% | Borrower has notable delinquency history or high debt burden | Decline or require additional security |
+| Very High Risk | Below 450 | 0.05% | Borrower has a significant probability of default within 24 months | Decline lending |
 
 
 &nbsp;
