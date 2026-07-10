@@ -7,7 +7,6 @@ It applies risk modeling practices to evaluate lending decisions across 150,000 
 The objective was to compare two modeling approaches by evaluating their performance using AUC and the KS statistic, and then convert predicted probabilities into a standardized credit score range. 
 The process includes data cleaning, model training, performance evaluation, and scorecard scaling, which segments borrowers into five risk bands to support credit decision-making.
 
-
 &nbsp;
 
 ## Why This Project Matters
@@ -15,11 +14,8 @@ Credit risk modelling is a core function in financial services.
 Lenders rely on probability of default models to decide who to lend to, how much to lend, and at what interest rate. 
 The model allows lenders to distinguish between a borrower likely to repay and one likely to default. 
 
-
 This project demonstrates an full modeling framework, transforming raw data into a deployable credit scorecard. 
 By covering data cleaning, statistical modeling, model evaluation, and output interpretation, it reflects the exact workflow used by credit risk analysts.
-
-
 
 &nbsp;
 
@@ -36,44 +32,33 @@ The preprocessing resolved these inconsistencies through targeted data imputatio
 
 **1) Load the Data:**
 The raw dataset was loaded into SAS and variable names were shortened to work within character limits. 
-This established the working dataset that all subsequent steps build upon.
-
 
 **2) Explore the Data:**
-Before making any changes, the data was explored to understand its structure, identify missing values, spot any errors, and confirm the overall default rate. This step informed every cleaning decision that followed. 
+The data was then explored to understand its structure, identify missing values, spot any errors, and confirm the default rate.
 
 **3) Clean the Data:**
-Missing values were filled using the median of each variable to preserve as many records as possible. Records with an age of zero were removed as these are not valid, and revolving utilisation was capped at 1 to remove unrealistic values. The data was checked again after cleaning to confirm all issues were resolved. 
-
+Records with an age of zero were removed as these are not valid, missing values were filled using the median of each variable, and revolving utilisation was capped at 1. The data was checked again after cleaning to confirm all issues were resolved. 
 
 **4) Split the Data:**
-The cleaned dataset was divided into a 70% training set and a 30% test set. The default rate was verified in both splits to confirm the division was representative before any model was built. 
-
+The cleaned dataset was divided into a 70% training set and a 30% test set. The default rate was verified in both splits to confirm the division in each dataset.
 
 **5) Compare Default and Non-Default Borrowers:**
-Average values across key variables were compared between borrowers who defaulted and those who did not. This helped identify which variables were likely to carry the most predictive power before modelling began. 
-
+Average values across key variables were compared between borrowers who defaulted and those who did not. This helped identify which variables were likely to carry the most predictive power.
 
 **6) Build the Logistic Regression Model:**
  A logistic regression model was built to predict the probability of default. Stepwise variable selection was applied to automatically identify and retain only the most statistically significant predictors from the available variables. 
 
-
 **7) Build the Random Forest Model:**
-A random forest model was built as a second approach to compare against logistic regression. Random forest was chosen because it can capture more complex relationships between variables that a linear model may not detect. 
-
+A random forest model was built to compare against logistic regression. Random forest was chosen because it can capture more complex relationships between variables that a linear model may not detect. 
 
 **8) Test Both Models:**
-Both models were applied to the test set to evaluate how well they performed on data they had not seen during training. This step produced the performance metrics used to compare the two approaches. 
-
+Both models were applied to the test set to evaluate how well they performed on data they had not seen during training.
 
 **9) Calculate the KS Statistic:**
-Calculate the KS Statistic: The KS statistic was calculated to measure how well the model separates borrowers who defaulted from those who did not. The higher the KS, the better the model is at distinguishing between the two groups.
-
+The KS statistic was calculated to measure how well the model separates borrowers who defaulted from those who did not. The higher the KS, the better the model is at distinguishing between the two groups.
 
 **10) Build the Credit Scorecard:**
-Predicted probabilities were converted into credit scores and borrowers were segmented into five risk bands. 
-The final scorecard was exported to CSV for further analysis.
-
+Predicted probabilities were converted into credit scores and borrowers were segmented into five risk bands.
 
 &nbsp;
 
@@ -103,13 +88,18 @@ The final scorecard was exported to CSV for further analysis.
 &nbsp;
 
 ## Limitations
-**1) Dataset Context:** The dataset originates from a US consumer lending context, meaning borrower behaviour patterns, income levels and definitions of default may not directly reflect a UK lending environment. 
+**1) Dataset Context:** 
+The dataset originates from the US, meaning borrower behaviour patterns, income levels and definitions of default may not directly reflect a UK environment. 
 
-**2) Missing Variables:** Several variables commonly used in real scorecard development are absent from this dataset which limits how closely this model replicates a production-ready scorecard, including employment status and time at address.
+**2) Missing Variables:** 
+Several variables commonly used in a real scorecard are absent from the dataset which limits thr accuracy of the credit scorecard, including employment status.
 
-**3) Late Payment Detail:** The dataset only captures late payments at 30, 60 and 90 day intervals. Having visibility of earlier missed payments such as 10 or 20 days would provide a more complete picture and could influence lending decisions. 
+**3) Late Payment Detail:** 
+The dataset only captures late payments at 30, 60 and 90 day intervals. Knowing earlier missed payments such as 10 or 20 days would provide a more complete picture and could influence lending decisions. 
 
-**4) Missing Value Treatment:** Missing values were filled using the median of each variable. While this avoids losing records, it introduces inaccuracies into the dataset, particularly for monthly income where a significant number of values were missing. 
+**4) Missing Value Treatment:** 
+Missing values were filled using the median of each variable which introduces inaccuracies into the dataset, particularly for monthly income where a significant number of values were missing. 
 
-**5) Static Dataset:** The model was trained and tested on a single snapshot of borrower data. It does not account for how borrower behaviour or conditions change over time.
+**5) Static Dataset:** 
+The model was trained and tested on a single snapshot of borrower data. It does not account for how borrower behaviour or conditions change over time.
 
