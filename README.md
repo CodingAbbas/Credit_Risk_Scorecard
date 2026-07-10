@@ -1,26 +1,34 @@
 # Predicting Credit Default Risk Using Statistical Modelling
 
 ## Overview
-This project builds an end-to-end credit risk scorecard to predict the probability of borrowers defaulting using logistic regression and random forest models. Developed in SAS, it replicates probability of default modelling practices used by credit risk teams to assess lending decisions across 150,000 borrower records. 
+This project developed in SAS and builds an end-to-end credit risk scorecard to predict the probability of borrowers defaulting using logistic regression and random forest models. 
+It applies risk modeling practices to evaluate lending decisions across 150,000 borrower records.
 
-The objective was to compare two modelling approaches, evaluate their performance using AUC, KS statistic and Gini coefficient, and convert predicted probabilities into a standardised credit score range. Borrowers are segmented into five risk bands to support credit decision making, with the full pipeline covering data cleaning, model training, performance evaluation and scorecard scaling. 
+The objective was to compare two modeling approaches by evaluating their performance using AUC and the KS statistic, and then convert predicted probabilities into a standardized credit score range. 
+The process includes data cleaning, model training, performance evaluation, and scorecard scaling, which segments borrowers into five risk bands to support credit decision-making.
 
 
 &nbsp;
 
 ## Why This Project Matters
-Credit risk modelling is a core function in financial services. Lenders rely on probability of default models to decide who to lend to, how much to lend, and at what interest rate. Without a model like this, there is no systematic way to distinguish between a borrower likely to repay and one likely to default. 
+Credit risk modelling is a core function in financial services. 
+Lenders rely on probability of default models to decide who to lend to, how much to lend, and at what interest rate. 
+The model allows lenders to distinguish between a borrower likely to repay and one likely to default. 
 
-This project was built to demonstrate the full modelling pipeline from raw data to a deployable scorecard. The skills include data cleaning, statistical modelling, model evaluation and output interpretation, reflecting the same workflow used by credit risk analysts working across risk, strategy and data functions in financial services.
+
+This project demonstrates an full modeling framework, transforming raw data into a deployable credit scorecard. 
+By covering data cleaning, statistical modeling, model evaluation, and output interpretation, it reflects the exact workflow used by credit risk analysts.
+
 
 
 &nbsp;
 
 ## Dataset
-Data was sourced from the Kaggle (Give me some credit) containing 150,000 borrower records across ten input features including revolving utilisation, age, debt ratio, monthly income, number of open credit, and late payment history across 30, 60 and 90 days. The scale and range of variables make it well suited for building a credit scorecard, with enough complexity to reflect the type of data encountered in a real lending environment. 
+Data was sourced from the Kaggle (Give me some credit) containing 150,000 borrower records across ten input features including revolving utilisation, age, debt ratio, monthly income, number of open credit, and late payment history across 30, 60 and 90 days. 
 
-The dataset presented several data quality challenges, with missing values across monthly income, revolving utilisation, debt ratio and dependents, each requiring imputation. Incorrect values were also present, including age recorded as 0 and utilisation exceeding 1, both of which would have distorted the results. These inconsistencies reflected the kind of messy, real-world data an analyst would typically encounter before building any predictive model.
-
+The scale and diverse range of these variables mirror the complexity of data in a real-world lending environment. 
+The dataset presented several data quality challenges, including missing values, and anomalies like an age of 0 and utilization rates exceeding 1. 
+The preprocessing resolved these inconsistencies through targeted data imputation and outlier treatment, addressing the exact type of messy data an analyst encounters in production.
 
 &nbsp;
 
