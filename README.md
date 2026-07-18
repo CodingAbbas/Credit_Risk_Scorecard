@@ -2,10 +2,7 @@
 
 ## Overview
 This project developed in SAS and builds an end-to-end credit risk scorecard to predict the probability of borrowers defaulting using logistic regression and random forest models. 
-It applies risk modeling practices to evaluate lending decisions across 150,000 borrower records.
-
-The objective was to compare two modeling approaches by evaluating their performance using AUC and the KS statistic, and then convert predicted probabilities into a standardized credit score range. 
-The process includes data cleaning, model training, performance evaluation, and scorecard scaling, which segments borrowers into five risk bands to support credit decision-making.
+It applies risk modeling practices to evaluate lending decisions across 150,000 borrower records. The objective was to compare two modeling approaches by evaluating their performance using AUC and the KS statistic, and then convert predicted probabilities into a standardized credit score range. The process includes data cleaning, model training, performance evaluation, and scorecard scaling, which segments borrowers into five risk bands to support credit decision-making.
 
 &nbsp;
 
