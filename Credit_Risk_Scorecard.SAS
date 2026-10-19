@@ -372,4 +372,22 @@ PROC EXPORT
     DBMS    = csv
     REPLACE;
 
+
+/* Export Logistic Coefficients for Excel Deployment */
+ODS OUTPUT ParameterEstimates = work.model_coefficients;
+
+PROC LOGISTIC DATA = work.train_data;
+    MODEL default (EVENT = '1') =
+    revutil age late30 debtratio income
+    opencredit late90 loans late60 dependents
+    / SELECTION = stepwise;
+RUN;
+
+PROC EXPORT
+    
+    DATA    = work.model_coefficients
+    OUTFILE = "/home/u64174377/credit_risk/model_coefficients.csv"
+    DBMS    = csv
+    REPLACE;
+
 RUN;
