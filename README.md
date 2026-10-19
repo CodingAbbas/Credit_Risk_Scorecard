@@ -112,3 +112,5 @@ Missing values were filled using the median of each variable which introduces in
 **5) Static Dataset:** 
 The model was trained and tested on a single snapshot of borrower data. It does not account for how borrower behaviour or conditions change over time.
 
+**6) Risk Band Calibration:** Risk bands use fixed score ranges rather than cut-offs calibrated to the portfolio, so 81.33% of borrowers fall in Medium Risk and only 0.13% in the top two bands. A lender would set cut-offs against its risk appetite and the observed default rate.
+
