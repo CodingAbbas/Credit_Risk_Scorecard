@@ -11,7 +11,7 @@ Credit risk modelling is a core function in financial services.
 Lenders rely on probability of default models to decide who to lend to, how much to lend, and at what interest rate. 
 The model allows lenders to distinguish between a borrower likely to repay and one likely to default. 
 
-This project demonstrates an full modeling framework, transforming raw data into a deployable credit scorecard. 
+This project demonstrates a full modelling framework, transforming raw data into a deployable credit scorecard. 
 By covering data cleaning, statistical modeling, model evaluation, and output interpretation, it reflects the exact workflow used by credit risk analysts.
 
 &nbsp;
@@ -101,7 +101,7 @@ The interface calculates Log-Odds dynamically using model coefficients, converts
 The dataset originates from the US, meaning borrower behaviour patterns, income levels and definitions of default may not directly reflect a UK environment. 
 
 **2) Missing Variables:** 
-Several variables commonly used in a real scorecard are absent from the dataset which limits thr accuracy of the credit scorecard, including employment status.
+Several variables commonly used in a real scorecard are absent from the dataset which limits the accuracy of the credit scorecard, including employment status.
 
 **3) Late Payment Detail:** 
 The dataset only captures late payments at 30, 60 and 90 day intervals. Knowing earlier missed payments such as 10 or 20 days would provide a more complete picture and could influence lending decisions. 
