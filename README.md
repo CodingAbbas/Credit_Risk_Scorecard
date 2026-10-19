@@ -59,6 +59,18 @@ Predicted probabilities were converted into credit scores and borrowers were seg
 
 &nbsp;
 
+## Operational Excel Extension
+
+To bridge the gap between back-end statistical modeling and front-end risk operations, the model coefficients were deployed into an interactive Excel underwriting platform (`Credit_Risk_Assessment_Model.xlsx`). 
+
+The interface calculates Log-Odds dynamically using model coefficients, converts probabilities to standard credit scores using a scorecard scaling approach, and executes automated decisioning and sliding-scale exposure limits for single-applicant assessment.
+
+![Platform Preview](Credit_Excel.png)
+
+
+
+&nbsp;
+
 ## Outcomes
 
 | Metric | Value | Description |
